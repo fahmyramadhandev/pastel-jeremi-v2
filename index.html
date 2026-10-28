@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastel Jeremi - Pastel Goreng Citra Indah City</title>
+  <meta name="description" content="Pastel goreng isi sayuran, telur, dan ayam. Citra Indah City, Bukit Agave. Pesan lewat WhatsApp 0831-1560-1008.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="atas">
+  <div class="wrap">
+    <a href="#" class="merek">Pastel Jeremi</a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#cara-pesan">Cara pesan</a>
+      <a href="#alamat">Alamat</a>
+    </nav>
+    <span class="jam">Buka tiap hari 06.00–16.00</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="pembuka">
+    <div class="wrap">
+      <div class="pembuka-teks">
+        <h1>Pastel<br>Jeremi</h1>
+        <p class="lead">Pastel goreng isi sayuran, telur, dan ayam. Citra Indah City, Bukit Agave.</p>
+        <p>Harga Rp2.500 sampai Rp4.000 per biji. Pesan lewat WhatsApp di
+          <a href="https://wa.me/6283115601008" target="_blank" rel="noopener">0831-1560-1008</a>.</p>
+        <a href="#menu" class="tombol">Pilih pesanan</a>
+      </div>
+
+      <figure class="pembuka-foto">
+        <img src="hero.jpg" alt="Beberapa pastel goreng di atas piring, satu dibelah memperlihatkan isinya" width="1800" height="1300">
+        <figcaption>Pastel Jeremi, Citra Indah City</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <div class="wrap">
+      <div class="menu-kiri">
+        <h2>Menu</h2>
+        <p class="ket">Harga per biji. Isi semua pastel: kentang dan wortel.</p>
+
+        <ul class="daftar">
+          <li class="item" data-nama="Pastel Sayuran" data-harga="2500">
+            <img src="sayuran.jpg" alt="Pastel Sayuran" width="720" height="720" loading="lazy">
+            <div class="item-nama">
+              <h3>Sayuran</h3>
+              <small>Kentang, wortel</small>
+            </div>
+            <span class="titik" aria-hidden="true"></span>
+            <span class="harga">2.500</span>
+            <div class="stepper">
+              <button type="button" class="kurang" aria-label="Kurangi Pastel Sayuran" disabled>−</button>
+              <span class="jumlah">0</span>
+              <button type="button" class="tambah" aria-label="Tambah Pastel Sayuran">+</button>
+            </div>
+          </li>
+
+          <li class="item" data-nama="Pastel Sayuran Telur" data-harga="3000">
+            <img src="telur.jpg" alt="Pastel Sayuran Telur" width="720" height="720" loading="lazy">
+            <div class="item-nama">
+              <h3>Sayuran Telur</h3>
+              <small>Kentang, wortel, telur</small>
+            </div>
+            <span class="titik" aria-hidden="true"></span>
+            <span class="harga">3.000</span>
+            <div class="stepper">
+              <button type="button" class="kurang" aria-label="Kurangi Pastel Sayuran Telur" disabled>−</button>
+              <span class="jumlah">0</span>
+              <button type="button" class="tambah" aria-label="Tambah Pastel Sayuran Telur">+</button>
+            </div>
+          </li>
+
+          <li class="item" data-nama="Pastel Sayuran Ayam" data-harga="3500">
+            <img src="ayam.jpg" alt="Pastel Sayuran Ayam" width="720" height="720" loading="lazy">
+            <div class="item-nama">
+              <h3>Sayuran Ayam</h3>
+              <small>Kentang, wortel, ayam</small>
+            </div>
+            <span class="titik" aria-hidden="true"></span>
+            <span class="harga">3.500</span>
+            <div class="stepper">
+              <button type="button" class="kurang" aria-label="Kurangi Pastel Sayuran Ayam" disabled>−</button>
+              <span class="jumlah">0</span>
+              <button type="button" class="tambah" aria-label="Tambah Pastel Sayuran Ayam">+</button>
+            </div>
+          </li>
+
+          <li class="item" data-nama="Pastel Sayuran Ayam Telur" data-harga="4000">
+            <img src="ayam-telur.jpg" alt="Pastel Sayuran Ayam Telur" width="720" height="720" loading="lazy">
+            <div class="item-nama">
+              <h3>Sayuran Ayam Telur</h3>
+              <small>Kentang, wortel, ayam, telur</small>
+            </div>
+            <span class="titik" aria-hidden="true"></span>
+            <span class="harga">4.000</span>
+            <div class="stepper">
+              <button type="button" class="kurang" aria-label="Kurangi Pastel Sayuran Ayam Telur" disabled>−</button>
+              <span class="jumlah">0</span>
+              <button type="button" class="tambah" aria-label="Tambah Pastel Sayuran Ayam Telur">+</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Nota: di laptop jadi kolom kanan, di HP jadi bar bawah -->
+      <aside class="nota" id="nota" aria-live="polite">
+        <div class="nota-kepala">
+          <strong>Pesanan</strong>
+          <span>Pastel Jeremi</span>
+        </div>
+        <p class="nota-kosong" id="notaKosong">Belum ada yang dipilih. Tekan + di menu.</p>
+        <ul class="nota-baris" id="notaBaris"></ul>
+        <div class="nota-total">
+          <span id="totalItem">0 pastel</span>
+          <strong id="totalHarga">Rp0</strong>
+        </div>
+        <a href="https://wa.me/6283115601008" class="nota-kirim" id="linkPesan" target="_blank" rel="noopener">Kirim ke WhatsApp</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="wrap">
+      <div id="cara-pesan">
+        <h2>Cara pesan</h2>
+        <ol>
+          <li><span>Pilih isi dan jumlah di menu.</span></li>
+          <li><span>Tekan <em>Kirim ke WhatsApp</em>. Daftar pesanan langsung terisi di chat ke 0831-1560-1008.</span></li>
+          <li><span>Atur pembayaran, ambil sendiri atau minta diantar, lewat chat itu juga.</span></li>
+        </ol>
+      </div>
+
+      <div id="alamat">
+        <h2>Alamat</h2>
+        <dl>
+          <dt>Tempat</dt>
+          <dd>Citra Indah City, Bukit Agave</dd>
+          <dt>Jam buka</dt>
+          <dd>Setiap hari, 06.00–16.00</dd>
+          <dt>WhatsApp</dt>
+          <dd><a href="https://wa.me/6283115601008" target="_blank" rel="noopener">0831-1560-1008</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bawah">
+  <div class="wrap">
+    <span>&copy; 2026 Pastel Jeremi</span>
+    <span>Citra Indah City, Bukit Agave</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

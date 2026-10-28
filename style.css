@@ -1,0 +1,610 @@
+/* Pastel Jeremi
+   warna: kertas krem, tinta coklat tua, oranye kulit pastel. hijau cuma buat tombol WA. */
+
+:root {
+  --kertas: #f3ece0;
+  --kertas-2: #ebe2d2;
+  --tinta: #2b211a;
+  --tinta-pudar: #6f6155;
+  --garis: #d6c9b5;
+  --oranye: #b8541c;
+  --wa: #1f8f4e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--kertas);
+  color: var(--tinta);
+  font: 400 17px/1.55 'Archivo', system-ui, sans-serif;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* judul pakai Archivo versi sempit */
+h1, h2, .merek {
+  font-stretch: 70%;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: .9;
+}
+
+
+/* ---------- header ---------- */
+
+.atas {
+  border-bottom: 1px solid var(--tinta);
+}
+
+.atas .wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  padding-top: 16px;
+  padding-bottom: 14px;
+}
+
+.merek {
+  font-size: 24px;
+  text-decoration: none;
+  letter-spacing: .02em;
+}
+
+.atas nav {
+  display: flex;
+  gap: 22px;
+  font-size: 15px;
+}
+
+.atas nav a {
+  text-decoration: none;
+}
+
+.atas nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.jam {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--tinta-pudar);
+}
+
+
+/* ---------- pembuka ---------- */
+
+.pembuka .wrap {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 48px;
+  align-items: end;
+  padding-top: 56px;
+  padding-bottom: 64px;
+}
+
+.pembuka h1 {
+  font-size: clamp(88px, 13vw, 168px);
+  margin-left: -4px; /* huruf P agak menjorok, biar lurus dengan teks */
+  margin-bottom: 28px;
+}
+
+.pembuka .lead {
+  font-size: 21px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.pembuka p {
+  max-width: 34ch;
+  color: var(--tinta-pudar);
+}
+
+.pembuka p a {
+  color: var(--tinta);
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.tombol {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 13px 22px 12px;
+  background: var(--tinta);
+  color: var(--kertas);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.tombol:hover {
+  background: var(--oranye);
+}
+
+.pembuka-foto img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.pembuka-foto figcaption {
+  margin-top: 8px;
+  font: 13px 'IBM Plex Mono', monospace;
+  color: var(--tinta-pudar);
+}
+
+
+/* ---------- menu ---------- */
+
+.menu {
+  border-top: 1px solid var(--tinta);
+  background: var(--kertas-2);
+}
+
+.menu .wrap {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 56px;
+  align-items: start;
+  padding-top: 56px;
+  padding-bottom: 72px;
+}
+
+.menu h2,
+.info h2 {
+  font-size: 64px;
+}
+
+.ket {
+  margin: 10px 0 28px;
+  color: var(--tinta-pudar);
+}
+
+.daftar {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid var(--garis);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 76px auto 1fr auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--garis);
+}
+
+.item img {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.item small {
+  font-size: 14px;
+  color: var(--tinta-pudar);
+}
+
+/* titik-titik antara nama dan harga, kayak daftar harga di warung */
+.titik {
+  align-self: end;
+  margin-bottom: 30px;
+  border-bottom: 2px dotted var(--garis);
+}
+
+.harga {
+  font: 600 18px 'IBM Plex Mono', monospace;
+}
+
+.harga::before {
+  content: 'Rp';
+  font-size: 13px;
+  margin-right: 2px;
+  color: var(--tinta-pudar);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--tinta);
+  border-radius: 3px;
+  background: var(--kertas);
+}
+
+.stepper button {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  background: none;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.stepper button:hover:not(:disabled) {
+  background: var(--tinta);
+  color: var(--kertas);
+}
+
+.stepper button:disabled {
+  color: var(--garis);
+  cursor: default;
+}
+
+.jumlah {
+  min-width: 26px;
+  text-align: center;
+  font: 600 16px 'IBM Plex Mono', monospace;
+}
+
+.item.dipilih .stepper {
+  border-color: var(--oranye);
+  box-shadow: inset 0 0 0 1px var(--oranye);
+}
+
+.item.dipilih .jumlah {
+  color: var(--oranye);
+}
+
+
+/* ---------- nota ---------- */
+
+.nota {
+  position: sticky;
+  top: 24px;
+  padding: 20px 20px 22px;
+  background: #fffdf8;
+  font: 14px/1.5 'IBM Plex Mono', monospace;
+  box-shadow: 0 1px 0 var(--garis), 0 10px 24px -14px rgba(43, 33, 26, .35);
+}
+
+/* pinggir bawah bergerigi, sobekan kertas nota */
+.nota::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 8px;
+  background:
+    linear-gradient(135deg, #fffdf8 50%, transparent 50%) 0 0 / 12px 8px,
+    linear-gradient(225deg, #fffdf8 50%, transparent 50%) 0 0 / 12px 8px;
+}
+
+.nota-kepala {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed var(--tinta-pudar);
+  text-transform: uppercase;
+}
+
+.nota-kepala span {
+  color: var(--tinta-pudar);
+}
+
+.nota-kosong {
+  color: var(--tinta-pudar);
+  padding: 6px 0 14px;
+}
+
+.nota-baris {
+  list-style: none;
+  padding: 0;
+}
+
+.nota-baris li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 3px 0;
+}
+
+.nota-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--tinta-pudar);
+}
+
+.nota-total strong {
+  font-size: 20px;
+}
+
+.nota-kirim {
+  display: block;
+  margin-top: 18px;
+  padding: 12px;
+  background: var(--wa);
+  color: #fff;
+  font: 600 16px 'Archivo', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.nota-kirim:hover {
+  background: #187a42;
+}
+
+body:not(.ada-pesanan) .nota-kirim {
+  background: var(--garis);
+  color: var(--tinta-pudar);
+  pointer-events: none;
+}
+
+
+/* ---------- info ---------- */
+
+.info {
+  border-top: 1px solid var(--tinta);
+}
+
+.info .wrap {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 56px;
+  padding-top: 56px;
+  padding-bottom: 72px;
+}
+
+.info h2 {
+  font-size: 48px;
+  margin-bottom: 22px;
+}
+
+.info ol {
+  padding-left: 0;
+  list-style: none;
+  counter-reset: langkah;
+}
+
+.info ol li {
+  counter-increment: langkah;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  padding: 12px 0;
+  border-top: 1px solid var(--garis);
+  max-width: 52ch;
+}
+
+.info ol li::before {
+  content: counter(langkah) '.';
+  font: 600 16px 'IBM Plex Mono', monospace;
+  color: var(--oranye);
+}
+
+.info dl {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+}
+
+.info dt,
+.info dd {
+  padding: 12px 0;
+  border-top: 1px solid var(--garis);
+}
+
+.info dt {
+  font-size: 14px;
+  color: var(--tinta-pudar);
+  padding-top: 15px;
+}
+
+.info dd a {
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+
+/* ---------- footer ---------- */
+
+.bawah {
+  border-top: 1px solid var(--tinta);
+  font-size: 14px;
+  color: var(--tinta-pudar);
+}
+
+.bawah .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+
+
+/* ---------- tablet ---------- */
+
+@media (max-width: 900px) {
+  .pembuka .wrap,
+  .info .wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .pembuka .wrap {
+    padding-top: 36px;
+  }
+
+  .pembuka-foto {
+    order: -1;
+  }
+
+  .menu .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  /* nota pindah ke bar bawah, baris detailnya disembunyikan */
+  .nota {
+    position: fixed;
+    top: auto;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 10;
+    display: none;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 10px 10px 16px;
+    background: var(--tinta);
+    color: var(--kertas);
+    border-radius: 4px;
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .5);
+  }
+
+  .ada-pesanan .nota {
+    display: grid;
+  }
+
+  .nota::after,
+  .nota-kepala,
+  .nota-kosong,
+  .nota-baris {
+    display: none;
+  }
+
+  .nota-total {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .nota-total span {
+    font-size: 12px;
+    opacity: .75;
+  }
+
+  .nota-total strong {
+    font-size: 18px;
+  }
+
+  .nota-kirim {
+    margin: 0;
+    padding: 11px 16px;
+  }
+
+  .ada-pesanan .bawah {
+    padding-bottom: 84px;
+  }
+}
+
+
+/* ---------- hp ---------- */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .wrap {
+    padding: 0 16px;
+  }
+
+  .atas nav {
+    display: none;
+  }
+
+  .atas .wrap {
+    gap: 12px;
+  }
+
+  .jam {
+    font-size: 13px;
+  }
+
+  .pembuka h1 {
+    font-size: 84px;
+    margin-bottom: 20px;
+  }
+
+  .pembuka .lead {
+    font-size: 19px;
+  }
+
+  .menu h2 {
+    font-size: 52px;
+  }
+
+  .info h2 {
+    font-size: 40px;
+  }
+
+  /* di hp: foto | nama | stepper, harga turun ke bawah nama */
+  .item {
+    grid-template-columns: 64px 1fr auto;
+    grid-template-areas:
+      'foto nama stepper'
+      'foto harga stepper';
+    column-gap: 14px;
+    row-gap: 2px;
+  }
+
+  .item img {
+    grid-area: foto;
+    width: 64px;
+    height: 64px;
+  }
+
+  .item-nama { grid-area: nama; }
+  .harga     { grid-area: harga; font-size: 16px; }
+  .stepper   { grid-area: stepper; }
+  .titik     { display: none; }
+
+  .item h3 {
+    font-size: 17px;
+  }
+
+  .item small {
+    font-size: 13px;
+  }
+
+  .stepper button {
+    width: 36px;
+    height: 40px;
+  }
+}
